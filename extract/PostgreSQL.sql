@@ -1,4 +1,5 @@
 --  Copyright 2025 TecOnca Data Solutions.
+--  Extract from PostgreSQL.
 
 use {{ database_name }};
 

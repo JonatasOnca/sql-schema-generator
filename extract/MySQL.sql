@@ -1,4 +1,5 @@
 --  Copyright 2025 TecOnca Data Solutions.
+--  Extract from MySQL.
 
 use {{ database_name }};
 

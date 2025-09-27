@@ -1,4 +1,5 @@
 --  Copyright 2025 TecOnca Data Solutions.
+--  Extract from SQLServer.
 
 use {{ database_name }};
 
