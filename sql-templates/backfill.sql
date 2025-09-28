@@ -3,4 +3,4 @@
 SELECT 
     ${fields}
     , CAST(CURRENT_TIMESTAMP AS VARCHAR) as insertionDateTime
-FROM {{ database_name }}.dbo.${table}
+FROM ${{ database_name }}.${table_name}
