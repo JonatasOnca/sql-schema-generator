@@ -96,10 +96,12 @@ class SchemaGenerator():
             _fields = []
             for item in fields_details:
                 _fields.append({
-                                "mode": "NULLABLE",
                                 "name": item[0],
+                                # "mode": "NULLABLE",
+                                "mode": "",
                                 "type": get_correct_type_schema(item[1]),
-                                "description": item[3] 
+                                "description": item[3],
+                                "fields": []
                                 })   
             os.makedirs(f"SCHEMA/{database_name}/", exist_ok=True)
             schema_filename = f'{table_name}.json'
