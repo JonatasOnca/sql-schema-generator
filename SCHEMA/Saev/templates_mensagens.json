@@ -1,38 +1,44 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "content",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "createdAt",
+        "mode": "",
         "type": "DATETIME",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "id",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "schoolId",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "title",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "updatedAt",
+        "mode": "",
         "type": "DATETIME",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

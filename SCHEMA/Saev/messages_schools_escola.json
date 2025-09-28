@@ -1,14 +1,16 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "escolaESCID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "messagesMENID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

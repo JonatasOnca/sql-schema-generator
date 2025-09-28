@@ -1,86 +1,100 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "ALT_ALU_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_ATIVO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_BY_AVA_ONLINE",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_BY_EDLER",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_BY_HERBY",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_DT_ATUALIZACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_DT_CRIACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_FINALIZADO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_FORNECEDOR",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_JUSTIFICATIVA",
+        "mode": "",
         "type": "STRING",
-        "description": "Campo destinado a justificar caso o aluno não tenha realizado o teste"
+        "description": "Campo destinado a justificar caso o aluno não tenha realizado o teste",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_TES_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ALT_USU_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "schoolClassTURID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

@@ -1,56 +1,65 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "assessmentId",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "bullId",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "countyId",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "createdAt",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "endDate",
+        "mode": "",
         "type": "DATETIME",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "id",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "jobType",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "startDate",
+        "mode": "",
         "type": "DATETIME",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "updatedAt",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

@@ -1,80 +1,93 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "createdAt",
+        "mode": "",
         "type": "DATETIME",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "fluente",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "frases",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "id",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "nao_avaliado",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "nao_fluente",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "nao_informado",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "nao_leitor",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "option",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "palavras",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "reportQuestionId",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "silabas",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "totalCorrect",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

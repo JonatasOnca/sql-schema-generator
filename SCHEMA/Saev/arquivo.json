@@ -1,38 +1,44 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "ARQ_ATIVO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ARQ_DT_ATUALIZACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ARQ_DT_CRIACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ARQ_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ARQ_NOME",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "ARQ_URL",
+        "mode": "",
         "type": "STRING",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

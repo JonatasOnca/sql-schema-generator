@@ -1,44 +1,51 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "createdAt",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "endDate",
+        "mode": "",
         "type": "DATE",
-        "description": "Campo destinado a quando o aluno saiu da turma"
+        "description": "Campo destinado a quando o aluno saiu da turma",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "id",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "schoolClassTURID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "startDate",
+        "mode": "",
         "type": "DATE",
-        "description": "Campo destinado a quando o aluno entrou na turma"
+        "description": "Campo destinado a quando o aluno entrou na turma",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "studentALUID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "updatedAt",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

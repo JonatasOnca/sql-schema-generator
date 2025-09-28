@@ -1,50 +1,58 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "MTI_ATIVO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_CODIGO",
+        "mode": "",
         "type": "STRING",
-        "description": "Campo destinado a informar o código do item do tópico"
+        "description": "Campo destinado a informar o código do item do tópico",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_DESCRITOR",
+        "mode": "",
         "type": "STRING",
-        "description": "Campo destinado a informar a descrição do item do tópico"
+        "description": "Campo destinado a informar a descrição do item do tópico",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_DT_ATUALIZACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_DT_CRIACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_MTO_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "MTI_OLD_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]

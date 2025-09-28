@@ -1,80 +1,93 @@
 [
     {
-        "mode": "NULLABLE",
         "name": "TRF_ALU_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_DT_ATUALIZACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_DT_CRIACAO",
+        "mode": "",
         "type": "TIMESTAMP",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_ESC_ID_DESTINO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_ESC_ID_ORIGEM",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_JUSTIFICATIVA",
+        "mode": "",
         "type": "STRING",
-        "description": "Campo destinado a informar a justificativa da transferência"
+        "description": "Campo destinado a informar a justificativa da transferência",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_OLD_ID",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_STATUS",
+        "mode": "",
         "type": "STRING",
-        "description": "Campo destinado a informar o status da transferência"
+        "description": "Campo destinado a informar o status da transferência",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_TUR_ID_DESTINO",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_TUR_ID_ORIGEM",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_USU",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     },
     {
-        "mode": "NULLABLE",
         "name": "TRF_USU_STATUS",
+        "mode": "",
         "type": "INTEGER",
-        "description": ""
+        "description": "",
+        "fields": []
     }
 ]
