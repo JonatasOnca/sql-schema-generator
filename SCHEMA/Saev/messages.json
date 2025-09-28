@@ -1,0 +1,38 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_IS_DELETE",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_TEXT",
+        "type": "STRING",
+        "description": "Campo destinado a informar o corpo da mensagem"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MEN_TITLE",
+        "type": "STRING",
+        "description": "Campo destinado a informar o título da mensagem"
+    }
+]

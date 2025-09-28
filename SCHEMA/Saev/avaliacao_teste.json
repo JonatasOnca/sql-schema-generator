@@ -1,0 +1,14 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_ID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

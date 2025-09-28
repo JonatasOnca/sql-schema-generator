@@ -1,0 +1,38 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_DESCRICAO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_NOME",
+        "type": "STRING",
+        "description": ""
+    }
+]

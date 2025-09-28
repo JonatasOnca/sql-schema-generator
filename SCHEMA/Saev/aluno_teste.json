@@ -1,0 +1,86 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_ALU_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_BY_AVA_ONLINE",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_BY_EDLER",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_BY_HERBY",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_FINALIZADO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_FORNECEDOR",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_JUSTIFICATIVA",
+        "type": "STRING",
+        "description": "Campo destinado a justificar caso o aluno não tenha realizado o teste"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_TES_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ALT_USU_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "schoolClassTURID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

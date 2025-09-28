@@ -1,0 +1,80 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "TES_ANO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_ARQUIVO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_DIS_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_MANUAL",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_MAR_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_NOME",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_OLD_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TES_SER_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "assessmentOnlineId",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

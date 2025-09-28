@@ -1,0 +1,56 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "assessmentId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "bullId",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "countyId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "createdAt",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "endDate",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "jobType",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "startDate",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "updatedAt",
+        "type": "TIMESTAMP",
+        "description": ""
+    }
+]

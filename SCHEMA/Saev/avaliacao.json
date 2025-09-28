@@ -1,0 +1,44 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_ANO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_NOME",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "AVA_OLD_ID",
+        "type": "INTEGER",
+        "description": "Campo para informar o ID antigo"
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "countyMUNID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "createdAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "file",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "stateId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "status",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "type",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "typeSchool",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "updatedAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "userUSUID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

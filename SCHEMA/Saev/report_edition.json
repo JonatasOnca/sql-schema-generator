@@ -1,0 +1,56 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "countyMUNID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "createdAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "editionAVAID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "regionalId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "schoolClassTURID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "schoolESCID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "type",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "updatedAt",
+        "type": "DATETIME",
+        "description": ""
+    }
+]

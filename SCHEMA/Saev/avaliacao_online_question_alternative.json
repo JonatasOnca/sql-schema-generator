@@ -1,0 +1,44 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "createdAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "image",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "option",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "questionId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "updatedAt",
+        "type": "DATETIME",
+        "description": ""
+    }
+]

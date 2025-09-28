@@ -1,0 +1,80 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_ALU_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_ESC_ID_DESTINO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_ESC_ID_ORIGEM",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_JUSTIFICATIVA",
+        "type": "STRING",
+        "description": "Campo destinado a informar a justificativa da transferência"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_OLD_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_STATUS",
+        "type": "STRING",
+        "description": "Campo destinado a informar o status da transferência"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_TUR_ID_DESTINO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_TUR_ID_ORIGEM",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_USU",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "TRF_USU_STATUS",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

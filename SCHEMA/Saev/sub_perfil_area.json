@@ -1,0 +1,14 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "ARE_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "SPE_ID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

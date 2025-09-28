@@ -1,0 +1,56 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_ALU_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_ANO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_FALTA",
+        "type": "INTEGER",
+        "description": "Campo destinado a informar a quantidade de faltas"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_MES",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_OLD_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "IFR_SCHOOL_CLASS_ID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "createdAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "method",
+        "type": "STRING",
+        "description": "Campo destinado a informar o método: POST, DELETE, PUT"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "nameEntity",
+        "type": "STRING",
+        "description": "Campo destinado a informar o nome da entidade que está sendo gerado o log"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "stateFinal",
+        "type": "STRING",
+        "description": "Campo destinado a informar o estado final do dado que será gerado o log"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "stateInitial",
+        "type": "STRING",
+        "description": "Campo destinado a informar o estado inicial do dado que será gerado o log"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "updatedAt",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "userUSUID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

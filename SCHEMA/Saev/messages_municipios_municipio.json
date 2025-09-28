@@ -1,0 +1,14 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "messagesMENID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "municipioMUNID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

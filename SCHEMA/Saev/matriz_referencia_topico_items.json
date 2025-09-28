@@ -1,0 +1,50 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_CODIGO",
+        "type": "STRING",
+        "description": "Campo destinado a informar o código do item do tópico"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_DESCRITOR",
+        "type": "STRING",
+        "description": "Campo destinado a informar a descrição do item do tópico"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_MTO_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MTI_OLD_ID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

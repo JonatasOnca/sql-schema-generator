@@ -1,0 +1,152 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_ARQ_CONVENIO",
+        "type": "STRING",
+        "description": "Campo destinado a informar o arquivo de convênio"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_BAIRRO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_CEP",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_CIDADE",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_COD_IBGE",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_COMPARTILHAR_DADOS",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_COMPLEMENTO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_DT_ATUALIZACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_DT_CRIACAO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_DT_FIM",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_DT_INICIO",
+        "type": "TIMESTAMP",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_ENDERECO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_LOGO",
+        "type": "STRING",
+        "description": "Campo destinado a informar o arquivo de upload da logo"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_MENSAGEM_EMAIL_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_MENSAGEM_WHATSAPP_ATIVO",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_NOME",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_NUMERO",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_OLD_ID",
+        "type": "INTEGER",
+        "description": "Campo para informar o ID antigo"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_PARCEIRO_EPV",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_STATUS",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "MUN_UF",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "stateId",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "stateRegionalId",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

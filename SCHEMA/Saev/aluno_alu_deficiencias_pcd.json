@@ -1,0 +1,14 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "alunoALUID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "pcdPCDID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]

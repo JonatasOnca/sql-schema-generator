@@ -1,0 +1,44 @@
+[
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_ALT_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_CERTO",
+        "type": "INTEGER",
+        "description": "Campo destinado a informar se o aluno acertou ou errou a questão."
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_DT_CRIACAO",
+        "type": "DATETIME",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_MTI_ID",
+        "type": "INTEGER",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "ATR_RESPOSTA",
+        "type": "STRING",
+        "description": ""
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "questionTemplateTEGID",
+        "type": "INTEGER",
+        "description": ""
+    }
+]
