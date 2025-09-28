@@ -10,7 +10,6 @@ def main(argv=None):
     databases = obj.import_files_database()
 
     Schema = SchemaGenerator()
-    
 
     try:
         for database in databases:

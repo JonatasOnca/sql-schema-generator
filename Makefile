@@ -39,6 +39,7 @@ install: venv
 run:
 	@echo "Executando o programa..."
 	$(VENV_PYTHON) main.py
+	@echo "Finalizando o programa..."
 
 activate:
 	@echo "Para ativar o ambiente virtual, execute no seu terminal:"
