@@ -1,3 +1,5 @@
+# Copyright 2025 TecOnca Data Solutions.
+
 from operator import itemgetter 
 from itertools import groupby 
 import csv

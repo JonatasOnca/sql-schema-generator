@@ -1,4 +1,4 @@
-# Makefile Completo para Projetos Python
+# Copyright 2025 TecOnca Data Solutions.
 
 # --- Variáveis ---
 # Define o interpretador Python base

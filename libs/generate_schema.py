@@ -1,3 +1,5 @@
+# Copyright 2025 TecOnca Data Solutions.
+
 import logging
 from pathlib import Path
 import json

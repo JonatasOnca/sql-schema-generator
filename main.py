@@ -1,3 +1,5 @@
+# Copyright 2025 TecOnca Data Solutions.
+
 import logging
 from libs.import_files import ImportCSV
 from libs.generate_query import QueryGenerator
