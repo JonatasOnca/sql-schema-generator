@@ -7,7 +7,7 @@ import os
 
 PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DESCRIPTION_DIR = f"{PARENT_DIR}/sql-templates"
+DESCRIPTION_DIR = f"{PARENT_DIR}/template_sql"
 
 _INTEGER = [
     'int',
@@ -103,10 +103,48 @@ def get_correct_type_to_bigquery(field: str):
         return field
 
 
-class QueryGeneratorTemplate():
+class QueryGenerator():
 
     def __init__(self) -> None:
-        pass 
+        pass
+
+    def generate_template(
+        self, 
+        base_table, 
+        source_table,
+        target_table,
+        p_key,
+        fields,
+        values,
+        update_fields,
+        keys,
+        p_key_sub_query,
+        incremental_field,
+        recordstamp,
+        join_key,
+        incremental_field_merge,
+        format_date
+    ):
+
+        sql_template = Template(sql_template_file.read())
+
+        generated_sql_template = sql_template.substitute(
+            base_table=f"{source_table}.{base_table}",
+            target_table=f"{target_table}.{base_table}",
+            p_key=p_key,
+            fields=fields,
+            update_fields=update_fields,
+            keys=", ".join(keys),
+            p_key_sub_query=p_key_sub_query,
+            incremental_field=incremental_field,
+            recordstamp = recordstamp,
+            join_key = join_key,
+            values=values,
+            incremental_field_merge=incremental_field_merge,
+            format_date=format_date,
+            )
+
+        return generated_sql_template   
 
  
     def generate_sql_database(
@@ -122,7 +160,7 @@ class QueryGeneratorTemplate():
         if not fields:
             print(f"Schema could not be retrieved for {source}")
         
-        for dag in ['backfill', 'incremental']:
+        for dag in ['backfill', 'ELT']:
             self.generate_database(
                 table=table,
                 fields=fields,
@@ -193,21 +231,33 @@ class QueryGeneratorTemplate():
             raise Exception(f"TECHNICAL Error - Unable to open SQL template or generate SQL: {a}")
 
 
-    def generate_table_schema(self, table):
-        base_table = table.get('table')
-        fields_type = table.get('fields_details')
+    def generate_table_schema(self, table, source):
+        base_table = table.get('base_table')
+        fields_type = table.get('fields_type')
         fields = []
         fields_lz = []
         for item in fields_type:
             fields.append({
                             "mode": "NULLABLE",
-                            "name": item[0],
-                            "type": get_correct_type_schema(item[1]),
-                            "description": item[3] 
+                            "name": item.get('field'),
+                            "type": get_correct_type_schema(item.get('type')),
+                            "description": item.get('description') 
                             })
+            fields_lz.append({
+                            "mode": "NULLABLE",
+                            "name": item.get('field'),
+                            "type": get_correct_type_schema(item.get('type')),
+                            "description": item.get('description') 
+                            })
+        fields_lz.append({
+                            "mode": "NULLABLE",
+                            "name": "insertionDateTime",
+                            "type": "STRING",
+                            "description": "Data e Hora que foi feita a inserção do dado na LZ" 
+                        })
         # LANDING ZONE SCHEMA       
-        schema_filename = f'{base_table}.json'
-        filename =f"SCHEMA/" + schema_filename
+        schema_filename = f'{base_table}_landing_zone_schema.json'
+        filename =f"dags/{source}/backfill/sql/{base_table}/" + schema_filename
         self.write_schema(fields_lz, filename) 
         return None
 
@@ -218,6 +268,7 @@ class QueryGeneratorTemplate():
                 Path(__file__).resolve().parents[1], filename), "w")
         json.dump(fields, generated_sql_file, ensure_ascii=False)
         generated_sql_file.close()
+        return None
 
     def write_sql(self, filename: str, file: str):
         generated_sql_file = open(

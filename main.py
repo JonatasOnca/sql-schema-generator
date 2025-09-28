@@ -1,21 +1,22 @@
 import logging
 from libs.import_files import ImportCSV
-from libs.generate_query import QueryGeneratorTemplate
+from libs.generate_query import QueryGenerator
+from libs.generate_schema import SchemaGenerator
+
 
 def main(argv=None):
     databases = []
     obj = ImportCSV()
     databases = obj.import_files_database()
 
-    temp = QueryGeneratorTemplate()
+    Schema = SchemaGenerator()
     
 
     try:
         for database in databases:
-            # print(database['file'])
-            # print(database['tables'])
+            base = database.get('file')
             for table in database.get('tables'):
-                temp.generate_table_schema(table)
+                Schema.generate_table_schema(base, table)
     
     except Exception as a:
         logging.error(f"Error: {a}")
