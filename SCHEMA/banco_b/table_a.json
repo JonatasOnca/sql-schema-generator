@@ -1,225 +1,9 @@
 [
     {
         "mode": "NULLABLE",
-        "name": "table_a_field_boolean",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_boolean "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_bit",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_bit "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_tinyint",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_tinyint "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_mediumblob",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_mediumblob "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_int",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_int "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_int_unique",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_int_unique "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_datetime",
-        "type": "DATETIME",
-        "description": "Table Description: table_a Field: table_a_field_datetime "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_enum",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_enum "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_integer",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_integer "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_dec",
-        "type": "NUMERIC",
-        "description": "Table Description: table_a Field: table_a_field_dec "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_blob",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_blob "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_year",
-        "type": "TIMESTAMP",
-        "description": "Table Description: table_a Field: table_a_field_year "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_date",
-        "type": "DATE",
-        "description": "Table Description: table_a Field: table_a_field_date "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_text",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_text "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_datetime2",
-        "type": "DATETIME",
-        "description": "Table Description: table_a Field: table_a_field_datetime2 "
-    },
-    {
-        "mode": "NULLABLE",
         "name": "table_a_field_bigint",
         "type": "INTEGER",
         "description": "Table Description: table_a Field: table_a_field_bigint "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_double_precision",
-        "type": "NUMERIC",
-        "description": "Table Description: table_a Field: table_a_field_double_precision "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_decimal",
-        "type": "NUMERIC",
-        "description": "Table Description: table_a Field: table_a_field_decimal "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_longblob",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_longblob "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_bool",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_bool "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_tinytext",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_tinytext "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_varchar",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_varchar "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_smallint",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_smallint "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_double",
-        "type": "NUMERIC",
-        "description": "Table Description: table_a Field: table_a_field_double "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_int64",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_int64 "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_smalldatetime",
-        "type": "DATETIME",
-        "description": "Table Description: table_a Field: table_a_field_smalldatetime "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_time",
-        "type": "TIMESTAMP",
-        "description": "Table Description: table_a Field: table_a_field_time "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_tinyblob",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_tinyblob "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_varbinary",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_varbinary "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_int_primary_key",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_int_primary_key "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_longtext",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_longtext "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_int_foreign_key",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_int_foreign_key "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_float",
-        "type": "NUMERIC",
-        "description": "Table Description: table_a Field: table_a_field_float "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_nvarchar",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_nvarchar "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_mediumint",
-        "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_mediumint "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_char",
-        "type": "STRING",
-        "description": "Table Description: table_a Field: table_a_field_char "
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "table_a_field_timestamp",
-        "type": "TIMESTAMP",
-        "description": "Table Description: table_a Field: table_a_field_timestamp "
     },
     {
         "mode": "NULLABLE",
@@ -229,14 +13,230 @@
     },
     {
         "mode": "NULLABLE",
-        "name": "table_a_field_numeric",
+        "name": "table_a_field_bit",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_bit "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_blob",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_blob "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_bool",
         "type": "INTEGER",
-        "description": "Table Description: table_a Field: table_a_field_numeric "
+        "description": "Table Description: table_a Field: table_a_field_bool "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_boolean",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_boolean "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_char",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_char "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_date",
+        "type": "DATE",
+        "description": "Table Description: table_a Field: table_a_field_date "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_datetime",
+        "type": "DATETIME",
+        "description": "Table Description: table_a Field: table_a_field_datetime "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_datetime2",
+        "type": "DATETIME",
+        "description": "Table Description: table_a Field: table_a_field_datetime2 "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_dec",
+        "type": "NUMERIC",
+        "description": "Table Description: table_a Field: table_a_field_dec "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_decimal",
+        "type": "NUMERIC",
+        "description": "Table Description: table_a Field: table_a_field_decimal "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_double",
+        "type": "NUMERIC",
+        "description": "Table Description: table_a Field: table_a_field_double "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_double_precision",
+        "type": "NUMERIC",
+        "description": "Table Description: table_a Field: table_a_field_double_precision "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_enum",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_enum "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_float",
+        "type": "NUMERIC",
+        "description": "Table Description: table_a Field: table_a_field_float "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_int",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_int "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_int64",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_int64 "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_int_foreign_key",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_int_foreign_key "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_int_primary_key",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_int_primary_key "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_int_unique",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_int_unique "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_integer",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_integer "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_longblob",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_longblob "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_longtext",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_longtext "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_mediumblob",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_mediumblob "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_mediumint",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_mediumint "
     },
     {
         "mode": "NULLABLE",
         "name": "table_a_field_mediumtext",
         "type": "STRING",
         "description": "Table Description: table_a Field: table_a_field_mediumtext "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_numeric",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_numeric "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_nvarchar",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_nvarchar "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_smalldatetime",
+        "type": "DATETIME",
+        "description": "Table Description: table_a Field: table_a_field_smalldatetime "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_smallint",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_smallint "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_text",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_text "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_time",
+        "type": "TIMESTAMP",
+        "description": "Table Description: table_a Field: table_a_field_time "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_timestamp",
+        "type": "TIMESTAMP",
+        "description": "Table Description: table_a Field: table_a_field_timestamp "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_tinyblob",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_tinyblob "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_tinyint",
+        "type": "INTEGER",
+        "description": "Table Description: table_a Field: table_a_field_tinyint "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_tinytext",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_tinytext "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_varbinary",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_varbinary "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_varchar",
+        "type": "STRING",
+        "description": "Table Description: table_a Field: table_a_field_varchar "
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "table_a_field_year",
+        "type": "TIMESTAMP",
+        "description": "Table Description: table_a Field: table_a_field_year "
     }
 ]

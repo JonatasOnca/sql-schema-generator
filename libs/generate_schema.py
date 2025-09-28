@@ -92,6 +92,7 @@ class SchemaGenerator():
     def generate_table_schema(self, base, table):
         base_table = table.get('table')
         fields_type = table.get('fields_details')
+        fields_type.sort()
         fields = []
         for item in fields_type:
             fields.append({
