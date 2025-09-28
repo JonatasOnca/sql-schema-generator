@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 import json
 import os 
@@ -89,28 +90,30 @@ class SchemaGenerator():
     def __init__(self) -> None:
         pass 
 
-    def generate_table_schema(self, base, table):
-        base_table = table.get('table')
-        fields_type = table.get('fields_details')
-        fields_type.sort()
-        fields = []
-        for item in fields_type:
-            fields.append({
-                            "mode": "NULLABLE",
-                            "name": item[0],
-                            "type": get_correct_type_schema(item[1]),
-                            "description": item[3] 
-                            })   
-        os.makedirs(f"SCHEMA/{base}/", exist_ok=True)
-        schema_filename = f'{base_table}.json'
-        filename =f"SCHEMA/{base}/" + schema_filename
-        self.write_schema(fields, filename) 
-        return None
+    def generate_table_schema(self, database_name, table_name, fields_details):
+        try:
+            fields_details.sort()
+            _fields = []
+            for item in fields_details:
+                _fields.append({
+                                "mode": "NULLABLE",
+                                "name": item[0],
+                                "type": get_correct_type_schema(item[1]),
+                                "description": item[3] 
+                                })   
+            os.makedirs(f"SCHEMA/{database_name}/", exist_ok=True)
+            schema_filename = f'{table_name}.json'
+            filename =f"SCHEMA/{database_name}/" + schema_filename
+            self.write_schema(_fields, filename) 
+            return None
+        except Exception as a:
+            logging.error(f"TECHNICAL Error - Generate SCHEMA: {a}")
+            raise Exception(f"TECHNICAL Error - Generate SCHEMA: {a}")
 
-    def write_schema(self, fields, filename):
+    def write_schema(self, _fields, filename):
         generated_sql_file = open(
             Path.joinpath(
                 Path(__file__).resolve().parents[1], filename), "w")
-        json.dump(fields, generated_sql_file, indent=4, ensure_ascii=False)
+        json.dump(_fields, generated_sql_file, indent=4, ensure_ascii=False)
         generated_sql_file.close()
         return None

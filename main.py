@@ -9,13 +9,18 @@ def main(argv=None):
     obj = ImportCSV()
     databases = obj.import_files_database()
 
+    Query = QueryGenerator()
     Schema = SchemaGenerator()
 
     try:
         for database in databases:
-            base = database.get('file')
+            database_name = database.get('file')
             for table in database.get('tables'):
-                Schema.generate_table_schema(base, table)
+                table_name = table.get('table')
+                fields = table.get('fields')
+                fields_details = table.get('fields_details')
+                Query.generate_table_sql(database_name, table_name, fields)
+                Schema.generate_table_schema(database_name, table_name, fields_details)
     
     except Exception as a:
         logging.error(f"Error: {a}")
