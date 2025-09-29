@@ -4,6 +4,7 @@ import logging
 from libs.import_files import ImportCSV
 from libs.generate_query import QueryGenerator
 from libs.generate_schema import SchemaGenerator
+from libs.generate_mapping_functions import MappingFunctionsGenerator
 
 
 def main(argv=None):
@@ -13,6 +14,7 @@ def main(argv=None):
 
     Query = QueryGenerator()
     Schema = SchemaGenerator()
+    MappingFunctions = MappingFunctionsGenerator()
 
     try:
         for database in databases:
@@ -23,7 +25,10 @@ def main(argv=None):
                 fields_details = table.get('fields_details')
                 Query.generate_table_sql(database_name, table_name, fields)
                 Schema.generate_table_schema(database_name, table_name, fields_details)
-    
+            
+            MappingFunctions.generate_mapping_functions(database_name, database)
+        
+
     except Exception as a:
         logging.error(f"Error: {a}")
         raise Exception(f"Error: {a}")
