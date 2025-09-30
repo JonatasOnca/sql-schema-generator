@@ -1,2 +1,5 @@
 # Copyright 2025 TecOnca Data Solutions.
 
+Jinja2==3.1.6
+logging==0.4.9.6
+MarkupSafe==3.0.3
