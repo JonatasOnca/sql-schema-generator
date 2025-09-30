@@ -14,5 +14,6 @@ env.bak/
 venv.bak/
 
 files/database/
+MAPPING/
 SCHEMA/
 SQL/
