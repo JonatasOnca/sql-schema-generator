@@ -2,7 +2,7 @@
 
 # --- Variáveis ---
 # Define o interpretador Python base
-PYTHON = python3.10
+PYTHON = python3.11
 
 # Define o nome do diretório do ambiente virtual
 VENV_DIR = .venv
