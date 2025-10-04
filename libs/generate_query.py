@@ -5,10 +5,36 @@ from string import Template
 from pathlib import Path
 
 import os
+from libs.type_data import _STRING, _DATE_DATE, _DATE_TIMESTAMP, _DATE_DATETIME, _DATE, _INTEGER, _BOOL, _NUMERIC
 
-_TYPE = [
-    'sql',
-]
+def get_correct_type_by_database(
+        database: str = 'MySQL', 
+        field_type: str = None
+    ):
+
+    if database == 'MySQL':
+        if field_type in _STRING:
+            return 'CHAR'
+        if field_type in _DATE:
+            return 'TIMESTAMP'
+        elif field_type in _INTEGER + _BOOL:
+            return 'SIGNED'
+        elif field_type in _NUMERIC:
+            return 'DECIMAL'
+        else:
+            return field_type
+    
+def cast_on_select(
+        database: str = 'MySQL',
+        field_name: str = None,
+        field_type: str = None,
+        field_mask: str = '%Y-%m-%d %H:%i:%s.%f',
+
+):
+    if database == 'MySQL' and field_type in _DATE:
+        return f'STR_TO_DATE({field_name}, "{field_mask}") AS {field_name}'
+    else:
+        return f'CAST({field_name} AS {get_correct_type_by_database(database, field_type)}) AS {field_name}'
 
 class QueryGenerator():
 
@@ -20,17 +46,14 @@ class QueryGenerator():
         self,
         database_name, 
         table_name, 
-        fields
+        fields_details
     ):
         try:
-            fields.sort()
-            sanitize = ','.join([item[0] for item in fields])
-            sanitize = sanitize.split(',')
-
-            for item in _TYPE:
-                with open(f"{os.getcwd()}/sql-templates/{item}.sql", 'r') as template:
-                    text = Template(template.read())
-                    template.close()
+            fields_details.sort()
+            sanitize = [cast_on_select('MySQL', item[0], item[1]) for item in fields_details]
+            with open(f"{os.getcwd()}/sql-templates/sql.sql", 'r') as template:
+                text = Template(template.read())
+                template.close()
 
                 result = text.substitute(
                     _fields = ",\n    ".join(sanitize),

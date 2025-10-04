@@ -21,9 +21,8 @@ def main(argv=None):
             database_name = database.get('file')
             for table in database.get('tables'):
                 table_name = table.get('table')
-                fields = table.get('fields')
                 fields_details = table.get('fields_details')
-                Query.generate_table_sql(database_name, table_name, fields)
+                Query.generate_table_sql(database_name, table_name, fields_details)
                 Schema.generate_table_schema(database_name, table_name, fields_details)
             
             MappingFunctions.generate_mapping_functions(database_name, database)
