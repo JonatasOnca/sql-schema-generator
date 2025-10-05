@@ -5,6 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 import os
 
+from libs.type_data import _DATE
+
 PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class MappingFunctionsGenerator():
@@ -24,7 +26,7 @@ class MappingFunctionsGenerator():
         env = Environment(loader=file_loader)
         template = env.get_template(template_name)
         try:  
-            msg = template.render(database=database)
+            msg = template.render(database=database, data=_DATE)
 
             generated_dag_file = open(
                 Path.joinpath(

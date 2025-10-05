@@ -19,12 +19,12 @@ def map_{{ table['table'] }}_to_dict(row):
     """Mapeia uma linha da tabela '{{ table['table'] }}' para um dicionário."""
     return {
         {% for fields in table['fields_details'] %}
-        {%- if fields[1] == 'time' -%}
-        "{{ fields[0] }}": row.{{ fields[0] }},
+        {% if fields[1] in data -%}
+        "{{ fields[0] }}": convert_datetimes_to_strings(row.{{ fields[0] }}),
         {%- else -%}
         "{{ fields[0] }}": row.{{ fields[0] }},
-        {% endif %}
-        {%- endfor -%}
+        {%- endif -%}
+        {% endfor %}
     }
 
 
