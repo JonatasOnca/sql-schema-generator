@@ -62,8 +62,8 @@ class QueryGenerator():
                 )
 
                 sql_filename = f'{table_name}.sql'
-                os.makedirs(f"SQL/{database_name}/", exist_ok=True)
-                filename =f"SQL/{database_name}/" + sql_filename
+                os.makedirs(f"_SQL/{database_name}/", exist_ok=True)
+                filename =f"_SQL/{database_name}/" + sql_filename
 
                 self.write_sql(filename, result)
 

@@ -1,20 +1,22 @@
 # Copyright 2025 TecOnca Data Solutions.
 
+
 import logging
 from libs.import_files import ImportCSV
 from libs.generate_query import QueryGenerator
 from libs.generate_schema import SchemaGenerator
 from libs.generate_transform_functions import MappingFunctionsGenerator
-
+from libs.generate_yaml import YAMLGenerator
 
 def main(argv=None):
     databases = []
     obj = ImportCSV()
     databases = obj.import_files_database()
 
-    Query = QueryGenerator()
-    Schema = SchemaGenerator()
-    MappingFunctions = MappingFunctionsGenerator()
+    ObjQuery = QueryGenerator()
+    ObjSchema = SchemaGenerator()
+    ObjMappingFunctions = MappingFunctionsGenerator()
+    ObjYAML = YAMLGenerator()
 
     try:
         for database in databases:
@@ -22,10 +24,11 @@ def main(argv=None):
             for table in database.get('tables'):
                 table_name = table.get('table')
                 fields_details = table.get('fields_details')
-                Query.generate_table_sql(database_name, table_name, fields_details)
-                Schema.generate_table_schema(database_name, table_name, fields_details)
+                ObjQuery.generate_table_sql(database_name, table_name, fields_details)
+                ObjSchema.generate_table_schema(database_name, table_name, fields_details)
             
-            MappingFunctions.generate_mapping_functions(database_name, database)
+            ObjMappingFunctions.generate_mapping_functions(database_name, database)
+            ObjYAML.generate_tables_config(database_name, database)
         
 
     except Exception as a:

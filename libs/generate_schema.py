@@ -44,9 +44,9 @@ class SchemaGenerator():
                                 "description": item[3],
                                 "fields": []
                                 })   
-            os.makedirs(f"SCHEMA/{database_name}/", exist_ok=True)
+            os.makedirs(f"_SCHEMA/{database_name}/", exist_ok=True)
             schema_filename = f'{table_name}.json'
-            filename =f"SCHEMA/{database_name}/" + schema_filename
+            filename =f"_SCHEMA/{database_name}/" + schema_filename
             schema = {'fields': _fields}
             self.write_schema(schema, filename) 
             return None

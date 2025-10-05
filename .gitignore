@@ -17,3 +17,8 @@ files/database/
 MAPPING/
 SCHEMA/
 SQL/
+YAML/
+_MAPPING/
+_SCHEMA/
+_SQL/
+_YAML/
