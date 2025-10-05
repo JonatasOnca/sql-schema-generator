@@ -23,11 +23,7 @@ class MappingFunctionsGenerator():
         file_loader = FileSystemLoader(self.template)
         env = Environment(loader=file_loader)
         template = env.get_template(template_name)
-        try:   
-            # for table in database.get('tables'):
-            #     table_name = table.get('table')
-            #     fields = table.get('fields')
-
+        try:  
             msg = template.render(database=database)
 
             generated_dag_file = open(
