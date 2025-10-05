@@ -20,8 +20,10 @@ def formatar_data(valor_data: str, formato_entrada: str, formato_saida: str) -> 
         return None
 
     try:
+        numero_em_string = valor_data[10:-1]
+        timestamp_numerico = float(numero_em_string)
         # Converte a string para um objeto datetime usando o formato de entrada
-        objeto_data = datetime.strptime(valor_data, formato_entrada)
+        objeto_data = datetime.fromtimestamp(timestamp_numerico)
         # Formata o objeto datetime para a string de saída
         return objeto_data.strftime(formato_saida)
     except (ValueError, TypeError) as e:

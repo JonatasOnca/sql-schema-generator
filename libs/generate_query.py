@@ -32,7 +32,7 @@ def cast_on_select(
 
 ):
     if database == 'MySQL' and field_type in _DATE:
-        return f'STR_TO_DATE({field_name}, "{field_mask}") AS {field_name}'
+        return f'DATE_FORMAT({field_name}, "{field_mask}") AS {field_name}'
     else:
         return f'CAST({field_name} AS {get_correct_type_by_database(database, field_type)}) AS {field_name}'
 
