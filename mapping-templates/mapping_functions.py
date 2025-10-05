@@ -52,7 +52,7 @@ def transform_{{ table['table'] }}_table(row_dict):
     transformed_row['{{fields[0]}}'] = formatar_data(
         valor_data=transformed_row.get('{{fields[0]}}'),
         formato_entrada='%Y-%m-%d %H:%i:%s.%f',
-        formato_saida='%Y-%m-%d %H:%M:%S' # Formato DATETIME para o BigQuery
+        formato_saida='%Y-%m-%d %H:%M:%S.%f' # Formato DATETIME para o BigQuery
     )
         {%- endif -%}
         {%- endfor %}
@@ -64,7 +64,7 @@ def transform_{{ table['table'] }}_table(row_dict):
 
 TRANSFORM_MAPPING = {
     {% for table in database['tables'] -%}
-    "{{ table['table'] }}": transform_{{ table['table'] }}_table,
+    '{{ table['table'] }}': transform_{{ table['table'] }}_table,
     {% endfor -%}
 }
 
