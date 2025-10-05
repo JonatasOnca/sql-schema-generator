@@ -12,7 +12,7 @@ PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 class MappingFunctionsGenerator():
 
     def __init__(self) -> None:
-        self.template = f"{PARENT_DIR}/mapping-templates"
+        self.template = f"{PARENT_DIR}/templates"
     
 
     def generate_mapping_functions(        
