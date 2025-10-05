@@ -4,7 +4,7 @@ import logging
 from libs.import_files import ImportCSV
 from libs.generate_query import QueryGenerator
 from libs.generate_schema import SchemaGenerator
-from libs.generate_mapping_functions import MappingFunctionsGenerator
+from libs.generate_transform_functions import MappingFunctionsGenerator
 
 
 def main(argv=None):

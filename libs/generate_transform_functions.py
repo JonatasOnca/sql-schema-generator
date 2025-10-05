@@ -21,7 +21,7 @@ class MappingFunctionsGenerator():
         database,
     ):
         os.makedirs(f"MAPPING/{database_name}", exist_ok=True)
-        template_name = "mapping_functions.py" 
+        template_name = "transform_functions.py" 
         file_loader = FileSystemLoader(self.template)
         env = Environment(loader=file_loader)
         template = env.get_template(template_name)
