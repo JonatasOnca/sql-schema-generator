@@ -35,6 +35,8 @@ def cast_on_select(
     if database == 'MySQL' and field_type in _DATE:
         return f'DATE_FORMAT({field_name}, "{field_mask}") AS {field_name}'
     else:
+        if field_name == 'option':
+            return f'CAST(`option` AS {get_correct_type_by_database(database, field_type)}) AS `option`'
         return f'CAST({field_name} AS {get_correct_type_by_database(database, field_type)}) AS {field_name}'
 
 class QueryGenerator():
