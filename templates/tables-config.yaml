@@ -15,7 +15,7 @@ tables:
     keys:
     {% for key in tables['primary_keys'] -%}
       - {{ key[0] }}
-    {% endfor -%}
+    {% endfor %}
   partitioning_config:
     type: DAY
     column: {{ tables['field_where'][0] }}
