@@ -1,5 +1,6 @@
 # Copyright 2025 TecOnca Data Solutions.
 
+
 import logging
 from string import Template
 from pathlib import Path

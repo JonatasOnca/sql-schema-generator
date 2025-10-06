@@ -5,10 +5,12 @@
 tables:
 {% for table in database['tables'] -%}
   - name: {{ table['table'] }}
+  {% for fields in table['fields_details'] -%}
   query_file: {{ table['table'] }}.sql
   schema_file: {{ table['table'] }}.json
   delta_config:
     column: GEN_DT_ATUALIZACAO
+    format: '%Y-%m-%d %H:%i:%s.%f'
     type: TIMESTAMP
   merge_config:
     keys:
@@ -21,4 +23,7 @@ tables:
       - GEN_ID
       - GEN_ATIVO
 
+  {%- endfor %}
+  
 {% endfor -%}
+

@@ -17,8 +17,8 @@ class YAMLGenerator():
 
     def generate_tables_config(        
         self,
-        database_name,
-        database,
+        database_name, 
+        database
     ):
         os.makedirs(f"_YAML/{database_name}", exist_ok=True)
         template_name = "tables-config.yaml" 

@@ -7,12 +7,10 @@ import os
 
 PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DATABASE_DIR = f"{PARENT_DIR}/files/database"
-
 class ImportCSV():
 
     def __init__(self, *args, **kwargs) -> None:
-        pass
+        self.template = f"{PARENT_DIR}/files/database"
     
     """
 
@@ -20,7 +18,7 @@ class ImportCSV():
     def import_files_database(self):
         list_of_files = []
 
-        for diretorio, subpastas, arquivos in os.walk(DATABASE_DIR):
+        for diretorio, subpastas, arquivos in os.walk(self.template):
             for arquivo in arquivos:
                 file = os.path.join(os.path.realpath(diretorio), arquivo)
                 with open(f"{file}",  mode='r', encoding='utf-8-sig') as file:
@@ -40,8 +38,8 @@ class ImportCSV():
                     primary_keys = []
                     for item in _table:
                         fields.append((item[1],))
-                        fields_details.append((item[1], item[2], item[3] != 'NULL', item[4]))
-                        if item[3] != 'NULL':
+                        fields_details.append((item[1], item[2], item[3] != '', item[4]))
+                        if item[3] != '':
                             keys.append((item[1],))
                         if 'PRIMARY' in item[3] or 'UNIQUE' in item[3]:
                             primary_keys.append((item[1],))
