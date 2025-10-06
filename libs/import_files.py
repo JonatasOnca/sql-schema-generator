@@ -46,8 +46,10 @@ class ImportCSV():
                             keys.append((item[1],))
                         if 'PRIMARY' in item[3] or 'UNIQUE' in item[3]:
                             primary_keys.append((item[1],))
-                        if item[6] != '':
-                            field_where.append((item[6],))
+                        if item[6] == 'X':
+                            field_where.append(item[1])
+                            field_where.append(item[5])
+                            field_where.append(item[2])
                     
                     _fields = [t for t in (set(tuple(i) for i in fields))]
                     _fields_details = [t for t in (set(tuple(i) for i in fields_details))]
@@ -60,7 +62,7 @@ class ImportCSV():
                         "fields": _fields,
                         "keys": _keys,
                         "primary_keys": _primary_keys,
-                        # "field_where": field_where[0],
+                        "field_where": field_where,
                     }
                     tables.append(table)
                 files = {

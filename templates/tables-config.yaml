@@ -3,27 +3,26 @@
 
 # Lista de tabelas para ingestão
 tables:
-{% for table in database['tables'] -%}
-  - name: {{ table['table'] }}
-  {% for fields in table['fields_details'] -%}
-  query_file: {{ table['table'] }}.sql
-  schema_file: {{ table['table'] }}.json
+{% for tables in database['tables'] -%}
+  - name: {{ tables['table'] }}
+  query_file: {{ tables['table'] }}.sql
+  schema_file: {{ tables['table'] }}.json
   delta_config:
-    column: GEN_DT_ATUALIZACAO
-    format: '%Y-%m-%d %H:%i:%s.%f'
-    type: TIMESTAMP
+    column: {{ tables['field_where'][0] }}
+    format: '{{ tables['field_where'][1] }}'
+    type: {{ tables['field_where'][2] }}
   merge_config:
     keys:
-      - GEN_ID
+    {% for key in tables['primary_keys'] -%}
+      - {{ key[0] }}
+    {% endfor -%}
   partitioning_config:
     type: DAY
-    column: GEN_DT_ATUALIZACAO
+    column: {{ tables['field_where'][0] }}
   clustering_config:
     columns: 
-      - GEN_ID
-      - GEN_ATIVO
-
-  {%- endfor %}
+    {% for key in tables['primary_keys'] -%}
+      - {{ key[0] }}
+    {% endfor %}
   
 {% endfor -%}
-
