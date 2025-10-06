@@ -32,14 +32,21 @@ def cast_on_select(
         field_mask: str = '%Y-%m-%d %H:%i:%s.%f',
 
 ):
-    if database == 'MySQL' and field_type in _DATE:
-        return f'CAST({field_name} AS CHAR) AS {field_name}'
+    if field_name == 'option':
+        return f'CAST(`option` AS {get_correct_type_by_database(database, field_type)}) AS `option`'
+    elif field_name == 'order':
+        return f'CAST(`order` AS {get_correct_type_by_database(database, field_type)}) AS `order`'
     else:
-        if field_name == 'option':
-            return f'CAST(`option` AS {get_correct_type_by_database(database, field_type)}) AS `option`'
-        elif field_name == 'order':
-            return f'CAST(`order` AS {get_correct_type_by_database(database, field_type)}) AS `order`'
-        return f'CAST({field_name} AS {get_correct_type_by_database(database, field_type)}) AS {field_name}'
+        return f'CAST({field_name} AS CHAR) AS {field_name}'
+    
+    # if database == 'MySQL' and field_type in _DATE:
+    #     return f'CAST({field_name} AS CHAR) AS {field_name}'
+    # else:
+    #     if field_name == 'option':
+    #         return f'CAST(`option` AS {get_correct_type_by_database(database, field_type)}) AS `option`'
+    #     elif field_name == 'order':
+    #         return f'CAST(`order` AS {get_correct_type_by_database(database, field_type)}) AS `order`'
+    #     return f'CAST({field_name} AS {get_correct_type_by_database(database, field_type)}) AS {field_name}'
 
 class QueryGenerator():
 
