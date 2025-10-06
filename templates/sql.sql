@@ -2,4 +2,4 @@
 
 SELECT 
     ${_fields}
-FROM ${_database_name}.${_table_name}
+FROM ${_database_name}.${_table_name} limit 1

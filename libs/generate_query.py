@@ -51,7 +51,7 @@ class QueryGenerator():
     ):
         try:
             fields_details.sort()
-            sanitize = [cast_on_select('MySQL', item[0], item[1]) for item in fields_details]
+            sanitize = [cast_on_select('MySQL', item[0], item[1], item[4]) for item in fields_details]
             with open(f"{os.getcwd()}/templates/sql.sql", 'r') as template:
                 text = Template(template.read())
                 template.close()
