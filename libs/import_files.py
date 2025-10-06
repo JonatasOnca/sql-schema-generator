@@ -38,7 +38,7 @@ class ImportCSV():
                     primary_keys = []
                     for item in _table:
                         fields.append((item[1],))
-                        fields_details.append((item[1], item[2], item[3] != '', item[4]))
+                        fields_details.append((item[1], item[2], item[3], item[4], item[5]))
                         if item[3] != '':
                             keys.append((item[1],))
                         if 'PRIMARY' in item[3] or 'UNIQUE' in item[3]:
