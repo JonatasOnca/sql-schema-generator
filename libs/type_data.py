@@ -29,7 +29,6 @@ _STRING = [
     'longtext',
     'longblob',
     'enum',
-    'json',
 ]
 
 _DATE_DATETIME = [
@@ -59,4 +58,8 @@ _NUMERIC = [
     'double precision',
     'double',
     'float',
+]
+
+_JSON = [
+    'json',
 ]

@@ -61,10 +61,12 @@ def transform_{{ table['table'] }}_table(row_dict):
         transformed_row['{{fields[0]}}'] = None
     else:
         transformed_row['{{fields[0]}}'] = int(transformed_row.get('{{fields[0]}}'))
-    
         {%- endif -%}
         {%- if fields[1] in decimal %}
     transformed_row['{{fields[0]}}'] = Decimal(transformed_row.get('{{fields[0]}}'))
+        {%- endif -%}
+        {%- if fields[1] in json %}
+    transformed_row['{{fields[0]}}'] = transformed_row.get('{{fields[0]}}')
         {%- endif -%}
         {%- endfor %}
 

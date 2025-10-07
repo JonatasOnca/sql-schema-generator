@@ -5,7 +5,7 @@ import logging
 from pathlib import Path
 import json
 import os 
-from libs.type_data import _STRING, _DATE_DATE, _DATE_TIMESTAMP, _DATE_DATETIME, _DATE, _INTEGER, _BOOL, _NUMERIC
+from libs.type_data import _STRING, _DATE_DATE, _DATE_TIMESTAMP, _DATE_DATETIME, _DATE, _INTEGER, _BOOL, _NUMERIC, _JSON
 
 
 def get_correct_type_schema(field: str):
@@ -13,17 +13,19 @@ def get_correct_type_schema(field: str):
     if field in _STRING:
         return 'STRING'
     if field in _DATE_DATE:
-        return 'DATE'
+        return 'TIMESTAMP'
     if field in _DATE_TIMESTAMP:
         return 'TIMESTAMP'
     if field in _DATE_DATETIME:
-        return 'DATETIME'
+        return 'TIMESTAMP'
     if field in _DATE:
         return 'TIMESTAMP'
     elif field in _INTEGER + _BOOL:
         return 'INTEGER'
     elif field in _NUMERIC:
         return 'NUMERIC'
+    elif field in _JSON:
+        return 'JSON'
     else:
         return field
 
