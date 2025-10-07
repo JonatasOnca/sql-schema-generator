@@ -33,9 +33,9 @@ def cast_on_select(
 
 ):
     if field_name == 'option':
-        return f'CAST(`option` AS {get_correct_type_by_database(database, field_type)}) AS `option`'
+        return f'CAST(`option` AS  CHAR) AS `option`'
     elif field_name == 'order':
-        return f'CAST(`order` AS {get_correct_type_by_database(database, field_type)}) AS `order`'
+        return f'CAST(`order` AS CHAR) AS `order`'
     else:
         return f'CAST({field_name} AS CHAR) AS {field_name}'
     

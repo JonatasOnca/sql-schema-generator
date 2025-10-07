@@ -29,6 +29,7 @@ _STRING = [
     'longtext',
     'longblob',
     'enum',
+    'json',
 ]
 
 _DATE_DATETIME = [
