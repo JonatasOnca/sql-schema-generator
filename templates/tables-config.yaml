@@ -8,12 +8,12 @@ tables:
   query_file: {{ tables['table'] }}.sql
   schema_file: {{ tables['table'] }}.json
   delta_config:
-    column: {{ tables['field_where'][0] | sort }}
+    column: {{ tables['field_where'][0] }}
     format: '{{ tables['field_where'][1] }}'
     type: {{ tables['field_where'][2] }}
   merge_config:
     keys:
-    {% for key in tables['primary_keys'] -%}
+    {% for key in tables['primary_keys'] | unique | sort -%}
       - {{ key[0] }}
     {% endfor %}
   partitioning_config:
@@ -21,7 +21,7 @@ tables:
     column: {{ tables['field_where'][0] | sort }}
   clustering_config:
     columns: 
-    {% for key in tables['primary_keys'] -%}
+    {% for key in tables['primary_keys'] | unique | sort -%}
       - {{ key[0] }}
     {% endfor %}
   
