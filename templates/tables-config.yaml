@@ -24,5 +24,4 @@ tables:
     {% for key in tables['primary_keys'] | unique | sort -%}
       - {{ key[0] }}
     {% endfor %}
-  
 {% endfor -%}
