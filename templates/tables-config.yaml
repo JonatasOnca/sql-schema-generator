@@ -8,7 +8,7 @@ tables:
   query_file: {{ tables['table'] }}.sql
   schema_file: {{ tables['table'] }}.json
   delta_config:
-    column: {{ tables['field_where'][0] }}
+    column: {{ tables['field_where'][0] | sort }}
     format: '{{ tables['field_where'][1] }}'
     type: {{ tables['field_where'][2] }}
   merge_config:
@@ -18,7 +18,7 @@ tables:
     {% endfor %}
   partitioning_config:
     type: DAY
-    column: {{ tables['field_where'][0] }}
+    column: {{ tables['field_where'][0] | sort }}
   clustering_config:
     columns: 
     {% for key in tables['primary_keys'] -%}
