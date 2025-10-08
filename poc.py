@@ -1,5 +1,4 @@
-
-from datetime import datetime, timezone
+from datetime import datetime, timedelta
 
 formatos_de_datas = [
     (
@@ -372,7 +371,7 @@ formatos_de_datas = [
         'professor', 
         'PRO_DT_ATUALIZACAO', 
         '2025-10-07 17:51:55.672728', 
-        '%Y-%m-%d %H:%M:%S %Z'
+        '%Y-%m-%d %H:%M:%S.%f %Z'
     ),
     (
         'raca', 
@@ -396,7 +395,8 @@ formatos_de_datas = [
         'regionais', 
         'updatedAt', 
         '2025-09-16 06:31:37.024283', 
-        '%Y-%m-%d %H:%M:%S %Z'
+        '%Y-%m-%d %H:%M:%S.%f %Z'
+
     ),
     (
         'report_descriptor', 
@@ -569,29 +569,78 @@ formatos_de_datas = [
 
 ]
 
-for indice, tabela, campo, valor, formato in enumerate(formatos_de_datas, start=1):
+
+def converter_data(valor_data, formato):
+    """
+    Converte uma string de data (ou número OLE) para um objeto datetime.
+    """
+    
+    # 1. Tentar converter números OLE (Excel Serial Date)
+    try:
+        # Tenta substituir vírgula por ponto para garantir o formato flutuante
+        valor_str = str(valor_data).replace(',', '.')
+        valor_flutuante = float(valor_str)
+        
+        # O número de dias é a parte inteira. 
+        # A parte decimal é a fração do dia.
+        
+        # Data de referência do Excel: 30 de dezembro de 1899
+        # (O Excel conta 1900-02-29, que não existe, por isso o offset é 2)
+        base_date = datetime(1899, 12, 30)
+        
+        # O offset de 2 dias é para compensar o erro de bissexto do Excel.
+        # Se for um inteiro, não precisamos do timedelta (só se for data pura)
+        # Se for decimal, o timedelta lida com a parte fracionária
+        if valor_flutuante < 60: # Assume que se for menor que 60 é uma data no século 20, 
+                                 # compensando a contagem errada do Excel para 1900.
+            dias = valor_flutuante - 2
+        else:
+            dias = valor_flutuante
+            
+        data_convertida = base_date + timedelta(days=dias)
+        
+        # O formato de saída para números OLE geralmente será mais simples, 
+        # já que o formato na lista para eles não é o 'verdadeiro' formato strptime
+        # e é só o formato esperado APÓS a conversão OLE.
+        return data_convertida.strftime('%Y-%m-%d %H:%M:%S.%f')
+        
+    except ValueError:
+        # Se falhar a conversão para float, tenta a conversão normal strptime
+        pass
+
+    # 2. Tentar conversão strptime padrão
+    try:
+        # O formato '%f %Z' pode causar problemas se a string não tem o TZ no final.
+        # Muitas vezes, o '%Z' no formato só funciona se a string tem a zona explícita, 
+        # ou se o valor for um "placeholder" para datas sem TZ.
+        
+        # Simplificando a lógica, vamos tentar o formato com %f (milissegundos)
+        # e ignorar o %Z se não estiver na string.
+        # Este é um exemplo simplificado, na prática você precisaria de mais tratativas.
+        
+        # Removendo %Z e %f do formato se o valor_data não tiver milissegundos/TZ
+        formato_limpo = formato.replace(' %Z', '').replace('T', ' ').replace('.%f', '')
+        if '.' in str(valor_data):
+            # Se tiver milissegundos, use o formato original (ou com T trocado por espaço)
+            if 'T' in formato:
+                formato = formato.replace('T', ' ')
+            
+            # Se o valor não tiver o %Z (ex: a turma_aluno['updatedAt']), precisa limpar o formato
+            if formato.endswith(' %Z') and ' ' not in str(valor_data).split(' ')[-1]:
+                formato = formato.replace(' %Z', '')
+
+        elif valor_data.count(':') < 2: # Se não tem segundos/horas, tenta formatos mais simples
+            return datetime.strptime(str(valor_data), '%Y-%m-%d')
+            
+        # Tenta a conversão com o formato completo
+        return datetime.strptime(str(valor_data), formato)
+        
+    except ValueError as e:
+        return f"ERRO ao analisar: {e} | Valor original: '{valor_data}' com formato '{formato}'"
 
 
-        # formato_saida = '%Y-%m-%dT%H:%M:%S.%f'
-        formato_saida = '%Y-%m-%d %H:%M:%S.%f'
-        # formato_saida = '%Y-%m-%d %H:%M:%S.%f %Z'
-
-        # Analisa a string para um objeto datetime
-        # %Y - Ano com 4 dígitos
-        # %m - Mês com 2 dígitos
-        # %d - Dia do mês com 2 dígitos
-        # %H - Hora (00-23)
-        # %M - Minuto (00-59)
-        # %S - Segundo (00-59)
-        # %f - Microssegundo
-        # %Z - Nome do fuso horário
-
-        objeto_datetime = datetime.strptime(valor, formato)
-        data_final_string = objeto_datetime.strftime(formato_saida)
-
-        print(f"Linha: { indice }")
-        print(f"Tabela: { tabela }")
-        print(f"Coluna: { campo }")
-        print(f"A string original é: { valor }")
-        print(f"O timestamp correspondente é: { objeto_datetime }")
-        print(f"O timestamp correspondente em str: { data_final_string }")
+# Demonstração
+print("--- Testando conversões ---")
+for tabela, campo, valor, formato in formatos_de_datas:
+    data_convertida = converter_data(valor, formato)
+    print(f"[{tabela}].[{campo}]: '{valor}' -> {data_convertida}")
