@@ -58,10 +58,10 @@ class ImportCSV():
                     
                     table = {
                         "table": table_name,
-                        "fields_details": _fields_details,
-                        "fields": _fields,
-                        "keys": _keys,
-                        "primary_keys": _primary_keys,
+                        "fields": sorted(_fields),
+                        "fields_details": sorted(_fields_details),
+                        "keys": sorted(_keys),
+                        "primary_keys": sorted(_primary_keys),
                         "field_where": field_where,
                     }
                     tables.append(table)

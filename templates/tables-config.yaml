@@ -18,7 +18,7 @@ tables:
     {% endfor %}
   partitioning_config:
     type: DAY
-    column: {{ tables['field_where'][0] | sort }}
+    column: {{ tables['field_where'][0] }}
   clustering_config:
     columns: 
     {% for key in tables['primary_keys'] | unique | sort -%}
