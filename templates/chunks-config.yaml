@@ -3,15 +3,15 @@
 
 # Chunks de tabelas para ingestão
 chunks:
-  - name: ALL
-    lista:
-    {% for table in tabelas -%}
-      - {{ table }}
-    {% endfor %}
-  {% for grupo, tabelas in grupos_de_tabelas.items() -%}
-  - name: {{ grupo }}
-    lista:
-    {% for table in tabelas -%}
-      - {{ table }}
-    {% endfor %}
+- name: ALL
+  lista:
+  {% for table in tabelas -%}
+    - {{ table }}
   {% endfor %}
+{% for grupo, tabelas in grupos_de_tabelas.items() -%}
+- name: {{ grupo }}
+  lista:
+  {% for table in tabelas -%}
+    - {{ table }}
+  {% endfor %}
+{% endfor %}
