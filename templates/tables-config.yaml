@@ -7,21 +7,40 @@ tables:
   - name: {{ tables['table'] }}
   query_file: {{ tables['table'] }}.sql
   schema_file: {{ tables['table'] }}.json
+  {%- if tables['field_where'] %}
   delta_config:
     column: {{ tables['field_where'][0] }}
     format: '{{ tables['field_where'][1] }}'
     type: {{ tables['field_where'][2] }}
+  {%- endif %}
+  {%- if tables['primary_keys'] | length <= 1 -%}
+  {% for unique_key in tables['primary_keys'] | unique %}
+  read_partitioning_config:
+    column: {{ unique_key }}
+    num_partitions: 10
+  {%- endfor %}
+  {%- endif -%}
+  {%- if tables['primary_keys'] %}
   merge_config:
     keys:
-    {% for key in tables['primary_keys'] | unique | sort -%}
-      - {{ key[0] }}
-    {% endfor %}
+    {%- for key in tables['primary_keys'] | unique %}
+      - {{ key }}
+    {%- endfor %}
+  {%- endif -%}
+  {%- if tables['field_where'] %}
   partitioning_config:
     type: DAY
     column: {{ tables['field_where'][0] }}
+  {%- endif %}
+  {%- if tables['primary_keys'] %}
   clustering_config:
     columns: 
-    {% for key in tables['primary_keys'] | unique | sort -%}
+    {%- set keys = tables['primary_keys'] + tables['unique_keys'] %}
+    {%- set filter_keys = keys | unique | slice(4) %}
+    {%- for key in filter_keys %}
+      {%- if key %}
       - {{ key[0] }}
+      {%- endif -%}
     {% endfor %}
+  {% endif %}
 {% endfor -%}

@@ -35,7 +35,11 @@ class ImportCSV():
                     fields = []
                     fields_details = []
                     keys = []
+
                     primary_keys = []
+                    unique_keys = []
+                    foreign_keys = []
+
                     field_where = []
                     table_name = ''
                     for item in _table:
@@ -43,25 +47,33 @@ class ImportCSV():
                         fields.append((item[1],))
                         fields_details.append((item[1], item[2], item[3], item[4], item[5], item[6]))
                         if item[3] != '':
-                            keys.append((item[1],))
-                        if 'PRIMARY' in item[3] or 'UNIQUE' in item[3]:
-                            primary_keys.append((item[1],))
+                            keys.append(item[1])
+                        if 'PRIMARY' in item[3]:
+                            primary_keys.append(item[1])
+                        if 'UNIQUE' in item[3]:
+                            unique_keys.append(item[1])
+                        if 'FOREIGN KEY' in item[3]:
+                            foreign_keys.append(item[1])
                         if item[6] == 'X':
                             field_where.append(item[1])
                             field_where.append(item[5])
                             field_where.append(item[2])
                     
-                    _fields = [t for t in (set(tuple(i) for i in fields))]
-                    _fields_details = [t for t in (set(tuple(i) for i in fields_details))]
-                    _keys = [t for t in (set(tuple(i) for i in keys))]
-                    _primary_keys = [t for t in (set(tuple(i) for i in primary_keys))]
-                    
+                    # _fields = [t for t in (set(tuple(i) for i in fields))]
+                    # _fields_details = [t for t in (set(tuple(i) for i in fields_details))]
+                    # _keys = [t for t in (set(tuple(i) for i in keys))]
+                    # _primary_keys = [t for t in (set(tuple(i) for i in primary_keys))]
+                    # _unique_keys = [t for t in (set(tuple(i) for i in unique_keys))]
+                    # _foreign_keys = [t for t in (set(tuple(i) for i in foreign_keys))]
+
                     table = {
                         "table": table_name,
-                        "fields": sorted(_fields),
-                        "fields_details": sorted(_fields_details),
-                        "keys": sorted(_keys),
-                        "primary_keys": sorted(_primary_keys),
+                        "fields": sorted(fields),
+                        "fields_details": sorted(fields_details),
+                        "keys": sorted(keys),
+                        "primary_keys": sorted(primary_keys),
+                        "unique_keys": sorted(unique_keys),
+                        "foreign_keys": sorted(foreign_keys),
                         "field_where": field_where,
                     }
                     tables.append(table)
