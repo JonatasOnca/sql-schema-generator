@@ -24,10 +24,10 @@ def main(argv=None):
             for table in database.get('tables'):
                 table_name = table.get('table')
                 fields_details = table.get('fields_details')
-                # ObjQuery.generate_table_sql(database_name, table_name, fields_details)
-                # ObjSchema.generate_table_schema(database_name, table_name, fields_details)
+                ObjQuery.generate_table_sql(database_name, table_name, fields_details)
+                ObjSchema.generate_table_schema(database_name, table_name, fields_details)
             
-            # ObjMappingFunctions.generate_mapping_functions(database_name, database)
+            ObjMappingFunctions.generate_mapping_functions(database_name, database)
             ObjYAML.generate_tables_config(database_name, database)
          
 

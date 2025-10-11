@@ -27,10 +27,10 @@ tables:
       - {{ key }}
     {%- endfor %}
   {%- endif -%}
-  {%- if tables['field_where'] %}
+  {%- if tables['partition_id'] %}
   partitioning_config:
-    type: DAY
-    column: {{ tables['field_where'][0] }}
+    type: {{ tables['partition_id'][1] }}
+    column: {{ tables['partition_id'][0] }}
   {%- endif %}
   {%- if tables['primary_keys'] %}
   clustering_config:

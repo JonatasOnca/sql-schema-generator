@@ -41,6 +41,7 @@ class ImportCSV():
                     foreign_keys = []
 
                     field_where = []
+                    partition_id = []
                     table_name = ''
                     for item in _table:
                         table_name = item[0]
@@ -58,7 +59,9 @@ class ImportCSV():
                             field_where.append(item[1])
                             field_where.append(item[5])
                             field_where.append(item[2])
-                    
+                        if item[6] == 'X':
+                            partition_id.append(item[1])  
+                            partition_id.append('DAY')                    
                     # _fields = [t for t in (set(tuple(i) for i in fields))]
                     # _fields_details = [t for t in (set(tuple(i) for i in fields_details))]
                     # _keys = [t for t in (set(tuple(i) for i in keys))]
@@ -75,6 +78,7 @@ class ImportCSV():
                         "unique_keys": sorted(unique_keys),
                         "foreign_keys": sorted(foreign_keys),
                         "field_where": field_where,
+                        "partition_id": partition_id  or ['_PARTITIONTIME', 'DAY']
                     }
                     tables.append(table)
                 files = {
