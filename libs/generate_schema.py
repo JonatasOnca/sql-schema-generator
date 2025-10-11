@@ -35,7 +35,7 @@ class SchemaGenerator():
     def __init__(self) -> None:
         pass 
 
-    def generate_table_schema(self, database_name, table_name, fields_details):
+    def generate_table_schema(self, database_name, table_name, fields_details, schema_type: str = 'upsert'):
         try:
             fields_details.sort()
             _fields = []
@@ -47,6 +47,20 @@ class SchemaGenerator():
                                 "description": item[3],
                                 "fields": []
                                 })   
+                
+            # Adiciona Metadados de Auditoria (para todos os schemas)
+            _fields.append({"name": "_ingestion_timestamp", "type": "TIMESTAMP", "description": "Timestamp da ingestão do dado na camada de destino."})
+            _fields.append({"name": "_source_name", "type": "STRING", "description": "Nome da fonte de dados de origem."})
+            _fields.append({"name": "_job_id", "type": "STRING", "description": "Identificador único do job que processou o registro."})
+            _fields.append({"name": "_row_hash", "type": "STRING", "description": "Hash das colunas de negócio para detecção de mudanças."})
+
+            # Adiciona Metadados de Ciclo de Vida (apenas para SCD2)
+            if schema_type == 'scd2':
+                _fields.append({"name": "is_current", "type": "BOOLEAN", "description": "Flag que indica se este é o registro válido/ativo atualmente."})
+                _fields.append({"name": "valid_from_timestamp", "type": "TIMESTAMP", "description": "Timestamp de quando o registro se tornou válido."})
+                _fields.append({"name": "valid_to_timestamp", "type": "TIMESTAMP", "description": "Timestamp de quando o registro deixou de ser válido.", "nullable": True},)
+                _fields.append({"name": "is_deleted", "type": "BOOLEAN", "description": "Flag para marcar registros que foram deletados na origem (soft delete)."})
+
             os.makedirs(f"_SCHEMA/{database_name}/", exist_ok=True)
             schema_filename = f'{table_name}.json'
             filename =f"_SCHEMA/{database_name}/" + schema_filename

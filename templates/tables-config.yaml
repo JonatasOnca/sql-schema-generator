@@ -22,6 +22,7 @@ tables:
   {%- endif -%}
   {%- if tables['primary_keys'] %}
   merge_config:
+    strategy: 'upsert' #'upsert' or 'scd2'
     keys:
     {%- for key in tables['primary_keys'] | unique %}
       - {{ key }}
