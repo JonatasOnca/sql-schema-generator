@@ -29,7 +29,7 @@ def main(argv=None):
             
             ObjMappingFunctions.generate_mapping_functions(database_name, database)
             ObjYAML.generate_tables_config(database_name, database)
-         
+            ObjYAML.generate_chunks_config(database_name)
 
     except Exception as a:
         logging.error(f"Error: {a}")
