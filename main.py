@@ -9,9 +9,9 @@ from libs.generate_transform_functions import MappingFunctionsGenerator
 from libs.generate_yaml import YAMLGenerator
 
 def main(argv=None):
-    databases = []
+    tables_config = []
     obj = ImportCSV()
-    databases = obj.import_files_database()
+    tables_config = obj.import_files_tables_config()
 
     ObjQuery = QueryGenerator()
     ObjSchema = SchemaGenerator()
@@ -19,7 +19,7 @@ def main(argv=None):
     ObjYAML = YAMLGenerator()
 
     try:
-        for database in databases:
+        for database in tables_config:
             database_name = database.get('file')
             for table in database.get('tables'):
                 table_name = table.get('table')

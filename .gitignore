@@ -13,7 +13,8 @@ ENV/
 env.bak/
 venv.bak/
 
-files/database/
+# files/chunks-config/
+# files/tables-config/
 MAPPING/
 SCHEMA/
 SQL/

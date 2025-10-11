@@ -10,12 +10,12 @@ PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 class ImportCSV():
 
     def __init__(self, *args, **kwargs) -> None:
-        self.template = f"{PARENT_DIR}/files/database"
+        self.template = f"{PARENT_DIR}/files/tables-config"
     
     """
 
     """
-    def import_files_database(self):
+    def import_files_tables_config(self):
         list_of_files = []
 
         for diretorio, subpastas, arquivos in os.walk(self.template):
