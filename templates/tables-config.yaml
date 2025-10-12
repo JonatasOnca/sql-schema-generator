@@ -30,8 +30,10 @@ tables:
   {%- endif -%}
   {%- if tables['partition_id'] %}
   partitioning_config:
-    type: {{ tables['partition_id'][1] }}
-    column: {{ tables['partition_id'][0] }}
+    type: {{ tables['partition_id'][0] }}
+    {%- if tables['partition_id'][1] %}
+    column: {{ tables['partition_id'][1] }}
+    {%- endif %}
   {%- endif %}
   {%- if tables['primary_keys'] %}
   clustering_config:
