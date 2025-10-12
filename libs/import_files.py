@@ -78,7 +78,7 @@ class ImportCSV():
                         "unique_keys": sorted(unique_keys),
                         "foreign_keys": sorted(foreign_keys),
                         "field_where": field_where,
-                        "partition_id": partition_id  or ['_PARTITIONTIME', 'DAY']
+                        "partition_id": partition_id  or ['', 'DAY']
                     }
                     tables.append(table)
                 files = {

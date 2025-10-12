@@ -17,7 +17,7 @@ tables:
   {% for unique_key in tables['primary_keys'] | unique %}
   read_partitioning_config:
     column: {{ unique_key }}
-    num_partitions: 10
+    num_partitions: 1
   {%- endfor %}
   {%- endif -%}
   {%- if tables['primary_keys'] %}
