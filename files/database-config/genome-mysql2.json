@@ -1,0 +1,7 @@
+{
+  "host": "genome-mysql.soe.ucsc.edu",
+  "port": 3306,
+  "user": "genome",
+  "password": "",
+  "database": "hg38"
+}
