@@ -1,3 +1,6 @@
+# Copyright 2025 TecOnca Data Solutions.
+
+
 _INTEGER = [
     'int',
     'int64',

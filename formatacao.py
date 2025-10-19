@@ -1,3 +1,5 @@
+# Copyright 2025 TecOnca Data Solutions.
+
 
 from datetime import datetime, timezone
 

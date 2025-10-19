@@ -1,5 +1,6 @@
 # Copyright 2025 TecOnca Data Solutions.
 
+
 # --- Variáveis ---
 # Define o interpretador Python base
 PYTHON = python3.10
