@@ -1,8 +1,6 @@
 --  Copyright 2025 TecOnca Data Solutions.
 --  Extract from MySQL.
 
-use {{ database_name }};
-
 select  
     info.TABLE_NAME as TABLE_NAME
     , info.COLUMN_NAME as COLUMN_NAME
@@ -20,9 +18,7 @@ ON
     and use_name.COLUMN_NAME = info.COLUMN_NAME
     and use_name.CONSTRAINT_NAME = const.CONSTRAINT_NAME
 where 
-    info.TABLE_SCHEMA = ${database_name}
-    and info.TABLE_NAME in (
-    ${tables_names}
-    )
+    info.TABLE_SCHEMA = 'testdb'
+    and info.TABLE_NAME not in ('')
 order by
     info.TABLE_NAME, info.ORDINAL_POSITION;
