@@ -1,6 +1,21 @@
 # Copyright 2025 TecOnca Data Solutions.
 
-
+# Core dependencies
 Jinja2==3.1.6
-logging==0.4.9.6
 MarkupSafe==3.0.3
+
+# Development dependencies
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Documentation
+sphinx==7.2.6
+
+# Optional: for better CSV handling
+pandas==2.1.4
+
+# Optional: for configuration files
+pyyaml==6.0.1
